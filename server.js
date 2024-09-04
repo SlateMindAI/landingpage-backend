@@ -14,7 +14,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-    origin: 'https://slatemind-demo-9wqx-git-main-ns-projects-92d038be.vercel.app/', // Allows only this origin
+    origin: 'https://www.slatemindai.com', // Allows only this origin
 }));
 
 app.use('/api', waitingListRoutes);
