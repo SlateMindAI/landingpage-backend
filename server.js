@@ -14,7 +14,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-    origin: 'http://localhost:3000', // Allows only this origin
+    origin: 'https://www.slatemindai.com/', // Allows only this origin
 }));
 
 app.use('/api', waitingListRoutes);
