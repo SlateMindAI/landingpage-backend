@@ -16,6 +16,8 @@ app.use(cors({
     origin: 'https://slatemindfrontend.netlify.app',
     credentials: true,
 }));
+// Handle preflight requests for all routes
+app.options('*', cors());
 
 app.use('/api', waitingListRoutes);
 
