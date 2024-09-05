@@ -13,9 +13,12 @@ connectDB();
 const app = express();
 
 app.use(cors({
-    origin: 'https://slatemindfrontend.netlify.app',
-    credentials: true,
+    origin: 'https://slatemindfrontend.netlify.app',  // No trailing slash
+    credentials: true,  // Allow credentials
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
 }));
+
 // Handle preflight requests for all routes
 app.options('*', cors());
 
