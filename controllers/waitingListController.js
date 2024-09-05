@@ -7,6 +7,10 @@ const sendEmail = require('../utils/sendEmail');
 exports.addToWaitingList = async (req, res) => {
   const { email, name } = req.body;
 
+  if(!email || !name){
+    return res.status(400).json({ success: false, error: 'Please provide both name and email' });
+  }
+
   try {
     const newUser = await WaitingList.create({ email, name });
 
