@@ -15,7 +15,7 @@ const app = express();
 app.use(express.json());  // This parses incoming JSON requests
 
 app.use(cors({
-    origin: 'https://slatemindfrontend.netlify.app',  // No trailing slash
+    origin: 'https://slatemindai.com/',  // No trailing slash
     credentials: true,  // Allow credentials
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
