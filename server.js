@@ -12,7 +12,7 @@ connectDB();
 
 const app = express();
 
-pp.use(cors({
+app.use(cors({
     origin: 'https://slatemindfrontend.netlify.app',  // No trailing slash
     credentials: true,  // Allow credentials like cookies
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
