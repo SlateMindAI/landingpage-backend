@@ -11,6 +11,8 @@ dotenv.config();
 connectDB();
 
 const app = express();
+// Middleware to handle JSON body
+app.use(express.json());  // This parses incoming JSON requests
 
 app.use(cors({
     origin: 'https://slatemindfrontend.netlify.app',  // No trailing slash
