@@ -18,7 +18,7 @@ exports.addToWaitingList = async (req, res) => {
     await sendEmail({
       to: email,
       subject: 'Thank You for Joining the SlateMindAI Waiting List!',
-      text: `Dear ${name},\n\nThank you for joining the SlateMindAI waiting list! We'll notify you once we launch.`,
+      text: `Dear ${name},\n\nThank you for joining the SlateMindAI waiting list! We're excited to have you on board! Here's how you can stay connected and updated with us:\n\n- Join our Discord: https://discord.gg/HX5fmKSd\n- Join our Reddit: https://www.reddit.com/r/MindSlateAI/\n- Connect with us on LinkedIn: https://www.linkedin.com/company/slatemind-ai/?viewAsMember=true\n\nWe will notify you as soon as we launch.\n\nBest regards,\nThe SlateMindAI Team`,
     });
 
     res.status(201).json({ success: true, data: newUser });
